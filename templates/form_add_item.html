@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Ordnung muss sein{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Dodaj przedmiot</h1>
+</div>
+{{ wtf.quick_form(form) }}
+{% endblock %}
