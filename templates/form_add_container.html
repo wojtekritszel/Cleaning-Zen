@@ -4,8 +4,10 @@
 {% block title %}Cleaning-Zen{% endblock %}
 
 {% block page_content %}
-<div class="page-header">
-    <h1>Dodaj schowek</h1>
-</div>
+<body background="{{ url_for('static', filename='test2.jpg') }}">>
+    <div class="page-header">
+        <h1>Dodaj schowek</h1>
+    </div>
 {{ wtf.quick_form(form) }}
+</body>
 {% endblock %}
