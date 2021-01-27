@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Cleaning-Zen{% endblock %}
+
+{% block page_content %}
+<body background="{{ url_for('static', filename='test2.jpg') }}">
+    <div class="page-header">
+        <h1>Witaj, {% if name %}{{ name }}{% else %}nieznajomy{% endif %} w programie ułatwiającym porządki domowe!</h1>
+    </div>
+{{ wtf.quick_form(form) }}
+</body>
+{% endblock %}
+
+<p>Lokalna data i czas: {{ moment(current_time).format('LLL') }}.</p>
+<p>To było (( moment(current_time).formatNow(refresh=True) }}</p>
